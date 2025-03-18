@@ -280,7 +280,8 @@ class TextClassificationModel:
         if fpr and tpr and roc_auc:
             plt.figure(figsize=(10, 8), dpi=150)
             for i in range(len(fpr)):
-                plt.plot(fpr[i], tpr[i], label=f'Class {i} (AUC = {roc_auc[i]:.2f})', linewidth=2)
+                class_name = self.id2label[str(int(i))]  # Convert class index to actual label
+                plt.plot(fpr[i], tpr[i], label=f'{class_name} (AUC = {roc_auc[i]:.2f})', linewidth=2)
 
             plt.plot([0, 1], [0, 1], 'k--', lw=2)
             plt.xlim([0.0, 1.0])

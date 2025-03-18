@@ -185,7 +185,9 @@ Contributions are welcome!
 
 ## Version History
 
-- **0.0.1:** Initial commit
+- **0.0.2:** Initial commit
+- **0.0.3:** added requests==2.27.1 so to avoid issue for downloading huggingface models
+- **0.0.4:** Fixed issue of not showing class names in ROC curve
 
 ---
 
